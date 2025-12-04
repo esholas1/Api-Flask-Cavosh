@@ -1,0 +1,40 @@
+- XAMPP (phpmyadmin)
+
+pip install flask
+pip install flask-cors
+pip install mysql-connector-python
+pip install werkzeug
+
+python main.py
+
+Registrar:
+POST: /api/cliente/registrar
+Body JSON:
+{
+  "nombres": "(nombres)",
+  "correo": "(correo)",
+  "passwordd": "(contraseña)"
+}
+
+Login:
+POST: /api/cliente/login
+Body JSON:
+{
+  "correo": "(correo)",
+  "passwordd": "(contraseña)"
+}
+
+Enviar codigo: (El codigo y el usuario id se muestra en el Terminal)
+POST: /api/cliente/enviar-codigo
+Body JSON:
+{
+  "correo": "(correo)"
+}
+
+Validar el codigo:
+POST: /api/cliente/validar-codigo
+Body JSON:
+{
+  "cliente_id": (id),
+  "codigo": (codigo)
+}
